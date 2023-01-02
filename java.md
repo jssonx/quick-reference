@@ -179,78 +179,26 @@ System.out.println(num);
 ### ArrayList
 ArrayList 类是一个可以动态修改的数组，与普通数组的区别就是它是没有固定大小的限制，我们可以添加或删除元素。
 
-#### 初始化
-ArrayList 类位于 java.util 包中，使用前需要引入它，语法格式如下：
-```java
-import java.util.ArrayList; // 引入 ArrayList 类
-ArrayList<E> objectName =new ArrayList<>();　 // 初始化
-```
-
-#### 添加元素 .add()
+#### 举例
 ```java
 import java.util.ArrayList;
 
 public class RunoobTest {
     public static void main(String[] args) {
-        ArrayList<String> sites = new ArrayList<String>();
-        sites.add("Google");
-        sites.add("Runoob");
-        sites.add("Taobao");
-        sites.add("Weibo");
-        System.out.println(sites);
-    }
-}
-```
-
-#### 访问元素 .get()
-```java
-import java.util.ArrayList;
-
-public class RunoobTest {
-    public static void main(String[] args) {
-        ArrayList<String> sites = new ArrayList<String>();
-        sites.add("Google");
-        sites.add("Runoob");
-        sites.add("Taobao");
-        sites.add("Weibo");
-        System.out.println(sites.get(1));  // 访问第二个元素
-    }
-}
-```
-
-#### 修改元素 .set()
-```java
-import java.util.ArrayList;
-
-public class RunoobTest {
-    public static void main(String[] args) {
-        ArrayList<String> sites = new ArrayList<String>();
-        sites.add("Google");
+        ArrayList<String> sites = new ArrayList<String>(); // 初始化
+        sites.add("Google"); // 添加元素
         sites.add("Runoob");
         sites.add("Taobao");
         sites.add("Weibo");
         sites.set(2, "Wiki"); // 第一个参数为索引位置，第二个为要修改的值
+        System.out.println(sites.get(1));  // 访问第二个元素
+        sites.remove(3); // 删除第四个元素
         System.out.println(sites);
+        System.out.println(sites.size());
     }
 }
 ```
-
-#### 删除元素 .remove()
-```java
-sites.remove(3); // 删除第四个元素
-
-```
-
-
-#### 计算大小 .size()
-```java
-System.out.println(sites.size());
-```
-
-#### 迭代数组列表 for
-我们可以使用 for 来迭代数组列表中的元素
-
-##### 总结
+#### 方法总结
 | **方法**           | **描述**                     |
 |:----------------:|:--------------------------:|
 | add()            | 将元素插入到指定位置的arraylist中      |
@@ -279,12 +227,8 @@ System.out.println(sites.size());
 | removeIf()       | 删除所有满足特定条件的arraylist元素     |
 | forEach()        | 遍历arraylist中每一个元素并执行特定操作   |
 
-
-
-
-
-
-
+#### 迭代数组列表 for
+我们可以使用 for 来迭代数组列表中的元素
 
 ### Vector
 
