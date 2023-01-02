@@ -65,14 +65,88 @@ String concat = str.concat("world");
 System.out.println(concat);
 ```
 
-## 数组 Arrays
+#### 字符串生成器
 ```java
+StringBuilder sb = new StringBuilder(10);
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
+|   |   |   |   |   |   |   |   |   |
+└───┴───┴───┴───┴───┴───┴───┴───┴───┘
+0   1   2   3   4   5   6   7   8   9
+sb.append("Reference");
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
+| R | e | f | e | r | e | n | c | e |
+└───┴───┴───┴───┴───┴───┴───┴───┴───┘
+0   1   2   3   4   5   6   7   8   9
+sb.delete(3, 9);
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
+| R | e | f |   |   |   |   |   |   |
+└───┴───┴───┴───┴───┴───┴───┴───┴───┘
+0   1   2   3   4   5   6   7   8   9
+sb.insert(0, "My ");
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
+| M | y |   | R | e | f |   |   |   |
+└───┴───┴───┴───┴───┴───┴───┴───┴───┘
+0   1   2   3   4   5   6   7   8   9
+sb.append("!");
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
+| M | y |   | R | e | f | ! |   |   |
+└───┴───┴───┴───┴───┴───┴───┴───┴───┘
+0   1   2   3   4   5   6   7   8   9
+```
+
+## 数组 Arrays
+
+#### 声明 Declare
+```java
+int[] a1;
+int[] a2 = {1, 2, 3};
+int[] a3 = new int[]{1, 2, 3};
+int[] a4 = new int[3];
+a4[0] = 1;
+a4[2] = 2;
+a4[3] = 3;
 char[] chars = new char[10];
 chars[0] = 'a'
 chars[1] = 'b'
 String[] letters = {"A", "B", "C"};
 int[] mylist = {100, 200};
 boolean[] answers = {true, false};
+```
+
+#### 修改 Modify
+```java
+int[] a = {1, 2, 3};
+a[0] = 9;
+```
+
+#### Loop (Read)
+```java
+String[] arr = {"a", "b", "c"};
+for (int a: arr) {
+    System.out.print(a + " ");
+}
+// 输出: a b c 
+```
+
+#### 排序 sort
+```java
+char[] chars = {'b', 'a', 'c'};
+Arrays.sort(chars);
+// [a, b, c]
+Arrays.toString(chars);
+```
+#### 二维数组 Multidimensional Arrays
+```java
+int[][] matrix = { {1, 2, 3}, {4, 5} };
+int x = matrix[1][0];  // 4
+// [[1, 2, 3], [4, 5]]
+Arrays.deepToString(matrix)
+for (int i = 0; i < a.length; ++i) {
+  for(int j = 0; j < a[i].length; ++j) {
+    System.out.println(a[i][j]);
+  }
+}
+// 输出: 1 2 3 4 5 6 7 
 ```
 
 ## 类型转换 Type Casting
@@ -99,3 +173,5 @@ System.out.println(str);
 int num = in.nextInt();
 System.out.println(num);
 ```
+
+## Java 框架总结
