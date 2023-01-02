@@ -199,50 +199,161 @@ public class RunoobTest {
 }
 ```
 #### 方法总结
-| **方法**           | **描述**                     |
-|:----------------:|:--------------------------:|
-| add()            | 将元素插入到指定位置的arraylist中      |
-| addAll()         | 添加集合中的所有元素到arraylist中      |
-| clear()          | 删除arraylist中的所有元素          |
-| clone()          | 复制一份arraylist              |
-| contains()       | 判断元素是否在arraylist           |
-| get()            | 通过索引值获取arraylist中的元素       |
-| indexOf()        | 返回arraylist中元素的索引值         |
-| removeAll()      | 删除存在于指定集合中的arraylist里的所有元素 |
-| remove()         | 删除arraylist里的单个元素          |
-| size()           | 返回arraylist里元素数量           |
-| isEmpty()        | 判断arraylist是否为空            |
-| subList()        | 截取部分arraylist的元素           |
-| set()            | 替换arraylist中指定索引的元素        |
-| sort()           | 对arraylist元素进行排序           |
-| toArray()        | 将arraylist转换为数组            |
-| toString()       | 将arraylist转换为字符串           |
-| ensureCapacity() | 设置指定容量大小的arraylist         |
-| lastIndexOf()    | 返回指定元素在arraylist中最后一次出现的位置 |
-| retainAll()      | 保留arraylist中在指定集合中也存在的那些元素 |
-| containsAll()    | 查看arraylist是否包含指定集合中的所有元素  |
-| trimToSize()     | 将arraylist中的容量调整为数组中的元素个数  |
-| removeRange()    | 删除arraylist中指定索引之间存在的元素    |
-| replaceAll()     | 将给定的操作内容替换掉数组中每一个元素        |
-| removeIf()       | 删除所有满足特定条件的arraylist元素     |
-| forEach()        | 遍历arraylist中每一个元素并执行特定操作   |
+| **变量和类型**       | **方法**                                        | **描述**                                                       |
+|:---------------:|:---------------------------------------------:|:------------------------------------------------------------:|
+| void            | add​(int index, E element)                    | 将指定元素插入此列表中的指定位置。                                            |
+| boolean         | add​(E e)                                     | 将指定的元素追加到此列表的末尾。                                             |
+| boolean         | addAll​(int index, Collection<? extends E> c) | 从指定位置开始，将指定集合中的所有元素插入此列表。                                    |
+| boolean         | addAll​(Collection<? extends E> c)            | 将指定集合中的所有元素按指定集合的Iterator返回的顺序附加到此列表的末尾。                     |
+| void            | clear()                                       | 从此列表中删除所有元素。                                                 |
+| Object          | clone()                                       | 返回此 ArrayList实例的浅表副本。                                        |
+| boolean         | contains​(Object o)                           | 如果此列表包含指定的元素，则返回 true 。                                      |
+| void            | ensureCapacity​(int minCapacity)              | 如有必要，增加此 ArrayList实例的容量，以确保它至少可以容纳由minimum capacity参数指定的元素数。 |
+| void            | forEach​(Consumer<? super E> action)          | 对 Iterable每个元素执行给定操作，直到处理 Iterable所有元素或操作引发异常。               |
+| E               | get​(int index)                               | 返回此列表中指定位置的元素。                                               |
+| int             | indexOf​(Object o)                            | 返回此列表中第一次出现的指定元素的索引，如果此列表不包含该元素，则返回-1。                       |
+| boolean         | isEmpty()                                     | 如果此列表不包含任何元素，则返回 true 。                                      |
+| Iterator<E>     | iterator()                                    | 以适当的顺序返回此列表中元素的迭代器。                                          |
+| int             | lastIndexOf​(Object o)                        | 返回此列表中指定元素最后一次出现的索引，如果此列表不包含该元素，则返回-1。                       |
+| ListIterator<E> | listIterator()                                | 返回此列表中元素的列表迭代器（按适当顺序）。                                       |
+| ListIterator<E> | listIterator​(int index)                      | 从列表中的指定位置开始，返回列表中元素的列表迭代器（按正确顺序）。                            |
+| E               | remove​(int index)                            | 删除此列表中指定位置的元素。                                               |
+| boolean         | remove​(Object o)                             | 从该列表中删除指定元素的第一个匹配项（如果存在）。                                    |
+| boolean         | removeAll​(Collection<?> c)                   | 从此列表中删除指定集合中包含的所有元素。                                         |
+| boolean         | removeIf​(Predicate<? super E> filter)        | 删除此集合中满足给定谓词的所有元素。                                           |
+| protected void  | removeRange​(int fromIndex, int toIndex)      | 从此列表中删除索引介于 fromIndex （含）和 toIndex （独占）之间的所有元素。              |
+| boolean         | retainAll​(Collection<?> c)                   | 仅保留此列表中包含在指定集合中的元素。                                          |
+| E               | set​(int index, E element)                    | 用指定的元素替换此列表中指定位置的元素。                                         |
+| int             | size()                                        | 返回此列表中的元素数。                                                  |
+| Spliterator<E>  | spliterator()                                 | 在此列表中的元素上创建late-binding和故障快速 Spliterator 。                   |
+| List<E>         | subList​(int fromIndex, int toIndex)          | 返回指定的 fromIndex （包含）和 toIndex （不包括）之间的此列表部分的视图。              |
+| Object[]        | toArray()                                     | 以适当的顺序（从第一个元素到最后一个元素）返回包含此列表中所有元素的数组。                        |
+| <T> T[]         | toArray​(T[] a)                               | 以适当的顺序返回包含此列表中所有元素的数组（从第一个元素到最后一个元素）; 返回数组的运行时类型是指定数组的运行时类型。 |
+
 
 #### 迭代数组列表 for
 我们可以使用 for 来迭代数组列表中的元素
 
-### Vector
-
 ### LinkedList
+
+#### 举例
+```java
+import java.util.LinkedList;
+
+public class RunoobTest {
+    public static void main(String[] args) {
+        LinkedList<String> sites = new LinkedList<String>(); //初始化
+        sites.add("Google"); // 添加元素
+        sites.addFirst("Wiki");// 使用 addFirst() 在头部添加元素   
+        sites.addLast("Wiki"); // 使用 addLast() 在尾部添加元素
+        sites.removeFirst(); // 使用 removeFirst() 移除头部元素
+        sites.removeLast(); // 使用 removeLast() 移除尾部元素
+        System.out.println(sites.getFirst()); // 使用 getFirst() 获取头部元素
+        System.out.println(sites.getLast()); // 使用 getLast() 获取尾部元素
+        for (int size = sites.size(), i = 0; i < size; i++) {
+            System.out.println(sites.get(i));
+        }
+        for (String i : sites) {
+            System.out.println(i);
+        }
+        sites.add("Runoob");
+        sites.add("Taobao");
+        sites.add("Weibo");
+        System.out.println(sites);
+    }
+}
+```
+
+#### 方法总结
+| **变量和类型**       | **方法**                                        | **描述**                                                       |
+|:---------------:|:---------------------------------------------:|:------------------------------------------------------------:|
+| void            | add​(int index, E element)                    | 将指定元素插入此列表中的指定位置。                                            |
+| boolean         | add​(E e)                                     | 将指定的元素追加到此列表的末尾。                                             |
+| boolean         | addAll​(int index, Collection<? extends E> c) | 从指定位置开始，将指定集合中的所有元素插入此列表。                                    |
+| boolean         | addAll​(Collection<? extends E> c)            | 将指定集合中的所有元素按指定集合的迭代器返回的顺序附加到此列表的末尾。                          |
+| void            | addFirst​(E e)                                | 在此列表的开头插入指定的元素。                                              |
+| void            | addLast​(E e)                                 | 将指定的元素追加到此列表的末尾。                                             |
+| void            | clear()                                       | 从此列表中删除所有元素。                                                 |
+| Object          | clone()                                       | 返回此 LinkedList的浅表副本。                                         |
+| boolean         | contains​(Object o)                           | 如果此列表包含指定的元素，则返回 true 。                                      |
+| Iterator<E>     | descendingIterator()                          | 以相反的顺序返回此双端队列中元素的迭代器。                                        |
+| E               | element()                                     | 检索但不删除此列表的头部（第一个元素）。                                         |
+| E               | get​(int index)                               | 返回此列表中指定位置的元素。                                               |
+| E               | getFirst()                                    | 返回此列表中的第一个元素。                                                |
+| E               | getLast()                                     | 返回此列表中的最后一个元素。                                               |
+| int             | indexOf​(Object o)                            | 返回此列表中第一次出现的指定元素的索引，如果此列表不包含该元素，则返回-1。                       |
+| int             | lastIndexOf​(Object o)                        | 返回此列表中指定元素最后一次出现的索引，如果此列表不包含该元素，则返回-1。                       |
+| ListIterator<E> | listIterator​(int index)                      | 从列表中的指定位置开始，返回此列表中元素的列表迭代器（按正确顺序）。                           |
+| boolean         | offer​(E e)                                   | 将指定的元素添加为此列表的尾部（最后一个元素）。                                     |
+| boolean         | offerFirst​(E e)                              | 在此列表的前面插入指定的元素。                                              |
+| boolean         | offerLast​(E e)                               | 在此列表的末尾插入指定的元素。                                              |
+| E               | peek()                                        | 检索但不删除此列表的头部（第一个元素）。                                         |
+| E               | peekFirst()                                   | 检索但不删除此列表的第一个元素，如果此列表为空，则返回 null 。                           |
+| E               | peekLast()                                    | 检索但不删除此列表的最后一个元素，如果此列表为空，则返回 null 。                          |
+| E               | poll()                                        | 检索并删除此列表的头部（第一个元素）。                                          |
+| E               | pollFirst()                                   | 检索并删除此列表的第一个元素，如果此列表为空，则返回 null 。                            |
+| E               | pollLast()                                    | 检索并删除此列表的最后一个元素，如果此列表为空，则返回 null 。                           |
+| E               | pop()                                         | 弹出此列表所代表的堆栈中的元素。                                             |
+| void            | push​(E e)                                    | 将元素推送到此列表所表示的堆栈上。                                            |
+| E               | remove()                                      | 检索并删除此列表的头部（第一个元素）。                                          |
+| E               | remove​(int index)                            | 删除此列表中指定位置的元素。                                               |
+| boolean         | remove​(Object o)                             | 从该列表中删除指定元素的第一个匹配项（如果存在）。                                    |
+| E               | removeFirst()                                 | 从此列表中删除并返回第一个元素。                                             |
+| boolean         | removeFirstOccurrence​(Object o)              | 删除此列表中第一次出现的指定元素（从头到尾遍历列表时）。                                 |
+| E               | removeLast()                                  | 从此列表中删除并返回最后一个元素。                                            |
+| boolean         | removeLastOccurrence​(Object o)               | 删除此列表中最后一次出现的指定元素（从头到尾遍历列表时）。                                |
+| E               | set​(int index, E element)                    | 用指定的元素替换此列表中指定位置的元素。                                         |
+| int             | size()                                        | 返回此列表中的元素数。                                                  |
+| Spliterator<E>  | spliterator()                                 | 在此列表中的元素上创建late-binding和故障快速 Spliterator 。                   |
+| Object[]        | toArray()                                     | 以适当的顺序（从第一个元素到最后一个元素）返回包含此列表中所有元素的数组。                        |
+| <T> T[]         | toArray​(T[] a)                               | 以适当的顺序返回包含此列表中所有元素的数组（从第一个元素到最后一个元素）; 返回数组的运行时类型是指定数组的运行时类型。 |
+
+
 
 ### HashSet
 
-### TreeSet
+#### 举例
+```java
+// 引入 HashSet 类      
+import java.util.HashSet;
+
+public class RunoobTest {
+    public static void main(String[] args) {
+    HashSet<String> sites = new HashSet<String>();
+        sites.add("Google");
+        sites.add("Runoob");
+        sites.add("Taobao");
+        sites.add("Zhihu");
+        sites.add("Runoob");  // 重复的元素不会被添加
+        System.out.println(sites);
+        System.out.println(sites.contains("Taobao")); // 判断元素是否存在
+        sites.remove("Taobao");  // 删除元素，删除成功返回 true，否则为 false
+        sites.clear();  // 删除所有元素
+        System.out.println(sites.size());  // 计算大小
+        for (String i : sites) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
+#### 方法总结
+| **变量和类型**      | **方法**              | **描述**                                     |
+|:--------------:|:-------------------:|:------------------------------------------:|
+| boolean        | add​(E e)           | 如果指定的元素尚不存在，则将其添加到此集合中。                    |
+| void           | clear()             | 从该集中删除所有元素。                                |
+| Object         | clone()             | 返回此 HashSet实例的浅表副本：未克隆元素本身。                |
+| boolean        | contains​(Object o) | 如果此set包含指定的元素，则返回 true 。                   |
+| boolean        | isEmpty()           | 如果此集合不包含任何元素，则返回 true 。                    |
+| Iterator<E>    | iterator()          | 返回此set中元素的迭代器。                             |
+| boolean        | remove​(Object o)   | 如果存在，则从该集合中移除指定的元素。                        |
+| int            | size()              | 返回此集合中的元素数（基数）。                            |
+| Spliterator<E> | spliterator()       | 在此集合中的元素上创建late-binding和失败快速 Spliterator 。 |
+
 
 ### HashMap
 
 ### HashTable
-
-### TreeMap
 
 ### ArrayDeque
 
@@ -271,3 +382,8 @@ public class RunoobTest {
 
 ## Java 框架总结（表格）
 <table class="show-header"><thead><tr><th align="left">集合</th><th align="left">Interface</th><th align="left">有序</th><th align="left">已排序</th><th align="left">线程安全</th><th align="left">复制</th><th align="left">Nullable</th></tr></thead><tbody><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">ArrayList</a></td><td align="left">List</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html">Vector</a></td><td align="left">List</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left">Y</td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html">LinkedList</a></td><td align="left">List, Deque</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArrayList.html">CopyOnWriteArrayList</a></td><td align="left">List</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left">Y</td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html">HashSet</a></td><td align="left">Set</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">One <code>null</code></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html">LinkedHashSet</a></td><td align="left">Set</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">One <code>null</code></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html">TreeSet</a></td><td align="left">Set</td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html">CopyOnWriteArraySet</a></td><td align="left">Set</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">One <code>null</code></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListSet.html">ConcurrentSkipListSet</a></td><td align="left">Set</td><td align="left">Y</td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">HashMap</a></td><td align="left">Map</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N (key)</em></td><td align="left">One <code>null</code> <em>(key)</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html">HashTable</a></td><td align="left">Map</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N (key)</em></td><td align="left"><em>N (key)</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html">LinkedHashMap</a></td><td align="left">Map</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N (key)</em></td><td align="left">One <code>null</code> <em>(key)</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html">TreeMap</a></td><td align="left">Map</td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N (key)</em></td><td align="left"><em>N (key)</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html">ConcurrentHashMap</a></td><td align="left">Map</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N (key)</em></td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListMap.html">ConcurrentSkipListMap</a></td><td align="left">Map</td><td align="left">Y</td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N (key)</em></td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html">ArrayDeque</a></td><td align="left">Deque</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html">PriorityQueue</a></td><td align="left">Queue</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedQueue.html">ConcurrentLinkedQueue</a></td><td align="left">Queue</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedDeque.html">ConcurrentLinkedDeque</a></td><td align="left">Deque</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html">ArrayBlockingQueue</a></td><td align="left">Queue</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingDeque.html">LinkedBlockingDeque</a></td><td align="left">Deque</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/PriorityBlockingQueue.html">PriorityBlockingQueue</a></td><td align="left">Queue</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr></tbody></table>
+
+
+
+## References
+ - https://www.runoob.com/manual/jdk11api/java.base/java/util/package-summary.html
