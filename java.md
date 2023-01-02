@@ -175,3 +175,47 @@ System.out.println(num);
 ```
 
 ## Java 框架总结
+
+#### ArrayList
+
+#### Vector
+
+#### LinkedList
+
+#### HashSet
+
+#### TreeSet
+
+#### HashMap
+
+#### HashTable
+
+#### TreeMap
+
+#### ArrayDeque
+
+#### PriorityQueue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Java 框架总结（表格）
+<table class="show-header"><thead><tr><th align="left">集合</th><th align="left">Interface</th><th align="left">有序</th><th align="left">已排序</th><th align="left">线程安全</th><th align="left">复制</th><th align="left">Nullable</th></tr></thead><tbody><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">ArrayList</a></td><td align="left">List</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html">Vector</a></td><td align="left">List</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left">Y</td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html">LinkedList</a></td><td align="left">List, Deque</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArrayList.html">CopyOnWriteArrayList</a></td><td align="left">List</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left">Y</td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html">HashSet</a></td><td align="left">Set</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">One <code>null</code></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html">LinkedHashSet</a></td><td align="left">Set</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">One <code>null</code></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html">TreeSet</a></td><td align="left">Set</td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html">CopyOnWriteArraySet</a></td><td align="left">Set</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">One <code>null</code></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListSet.html">ConcurrentSkipListSet</a></td><td align="left">Set</td><td align="left">Y</td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">HashMap</a></td><td align="left">Map</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N (key)</em></td><td align="left">One <code>null</code> <em>(key)</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html">HashTable</a></td><td align="left">Map</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N (key)</em></td><td align="left"><em>N (key)</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html">LinkedHashMap</a></td><td align="left">Map</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left"><em>N (key)</em></td><td align="left">One <code>null</code> <em>(key)</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html">TreeMap</a></td><td align="left">Map</td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N (key)</em></td><td align="left"><em>N (key)</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html">ConcurrentHashMap</a></td><td align="left">Map</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N (key)</em></td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListMap.html">ConcurrentSkipListMap</a></td><td align="left">Map</td><td align="left">Y</td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N (key)</em></td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html">ArrayDeque</a></td><td align="left">Deque</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html">PriorityQueue</a></td><td align="left">Queue</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedQueue.html">ConcurrentLinkedQueue</a></td><td align="left">Queue</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedDeque.html">ConcurrentLinkedDeque</a></td><td align="left">Deque</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html">ArrayBlockingQueue</a></td><td align="left">Queue</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingDeque.html">LinkedBlockingDeque</a></td><td align="left">Deque</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr><tr><td align="left"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/PriorityBlockingQueue.html">PriorityBlockingQueue</a></td><td align="left">Queue</td><td align="left">Y</td><td align="left"><em>N</em></td><td align="left">Y</td><td align="left">Y</td><td align="left"><em>N</em></td></tr></tbody></table>
