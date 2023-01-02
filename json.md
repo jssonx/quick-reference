@@ -1,0 +1,15 @@
+# Json
+
+```json
+{
+  "Jack": {
+    "id": 1,
+    "name": "Franc",
+    "salary": 25000,
+    "hobby": ["a", "b"],
+    "location": {
+        "country": "A", "city": "A-A"
+    }
+  }
+}
+```
