@@ -176,25 +176,133 @@ System.out.println(num);
 
 ## Java 框架总结
 
-#### ArrayList
+### ArrayList
+ArrayList 类是一个可以动态修改的数组，与普通数组的区别就是它是没有固定大小的限制，我们可以添加或删除元素。
 
-#### Vector
+#### 初始化
+ArrayList 类位于 java.util 包中，使用前需要引入它，语法格式如下：
+```java
+import java.util.ArrayList; // 引入 ArrayList 类
+ArrayList<E> objectName =new ArrayList<>();　 // 初始化
+```
 
-#### LinkedList
+#### 添加元素 .add()
+```java
+import java.util.ArrayList;
 
-#### HashSet
+public class RunoobTest {
+    public static void main(String[] args) {
+        ArrayList<String> sites = new ArrayList<String>();
+        sites.add("Google");
+        sites.add("Runoob");
+        sites.add("Taobao");
+        sites.add("Weibo");
+        System.out.println(sites);
+    }
+}
+```
 
-#### TreeSet
+#### 访问元素 .get()
+```java
+import java.util.ArrayList;
 
-#### HashMap
+public class RunoobTest {
+    public static void main(String[] args) {
+        ArrayList<String> sites = new ArrayList<String>();
+        sites.add("Google");
+        sites.add("Runoob");
+        sites.add("Taobao");
+        sites.add("Weibo");
+        System.out.println(sites.get(1));  // 访问第二个元素
+    }
+}
+```
 
-#### HashTable
+#### 修改元素 .set()
+```java
+import java.util.ArrayList;
 
-#### TreeMap
+public class RunoobTest {
+    public static void main(String[] args) {
+        ArrayList<String> sites = new ArrayList<String>();
+        sites.add("Google");
+        sites.add("Runoob");
+        sites.add("Taobao");
+        sites.add("Weibo");
+        sites.set(2, "Wiki"); // 第一个参数为索引位置，第二个为要修改的值
+        System.out.println(sites);
+    }
+}
+```
 
-#### ArrayDeque
+#### 删除元素 .remove()
+```java
+sites.remove(3); // 删除第四个元素
 
-#### PriorityQueue
+```
+
+
+#### 计算大小 .size()
+```java
+System.out.println(sites.size());
+```
+
+#### 迭代数组列表 for
+我们可以使用 for 来迭代数组列表中的元素
+
+##### 总结
+| **方法**           | **描述**                     |
+|:----------------:|:--------------------------:|
+| add()            | 将元素插入到指定位置的arraylist中      |
+| addAll()         | 添加集合中的所有元素到arraylist中      |
+| clear()          | 删除arraylist中的所有元素          |
+| clone()          | 复制一份arraylist              |
+| contains()       | 判断元素是否在arraylist           |
+| get()            | 通过索引值获取arraylist中的元素       |
+| indexOf()        | 返回arraylist中元素的索引值         |
+| removeAll()      | 删除存在于指定集合中的arraylist里的所有元素 |
+| remove()         | 删除arraylist里的单个元素          |
+| size()           | 返回arraylist里元素数量           |
+| isEmpty()        | 判断arraylist是否为空            |
+| subList()        | 截取部分arraylist的元素           |
+| set()            | 替换arraylist中指定索引的元素        |
+| sort()           | 对arraylist元素进行排序           |
+| toArray()        | 将arraylist转换为数组            |
+| toString()       | 将arraylist转换为字符串           |
+| ensureCapacity() | 设置指定容量大小的arraylist         |
+| lastIndexOf()    | 返回指定元素在arraylist中最后一次出现的位置 |
+| retainAll()      | 保留arraylist中在指定集合中也存在的那些元素 |
+| containsAll()    | 查看arraylist是否包含指定集合中的所有元素  |
+| trimToSize()     | 将arraylist中的容量调整为数组中的元素个数  |
+| removeRange()    | 删除arraylist中指定索引之间存在的元素    |
+| replaceAll()     | 将给定的操作内容替换掉数组中每一个元素        |
+| removeIf()       | 删除所有满足特定条件的arraylist元素     |
+| forEach()        | 遍历arraylist中每一个元素并执行特定操作   |
+
+
+
+
+
+
+
+
+### Vector
+
+### LinkedList
+
+### HashSet
+
+### TreeSet
+
+### HashMap
+
+### HashTable
+
+### TreeMap
+
+### ArrayDeque
+
+### PriorityQueue
 
 
 
