@@ -20,31 +20,21 @@
 星号
 
 ***
-下划线
-
-___
-
-
 
 ## 脚注
-这是一个简单的脚注[^1]。
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
-一个脚注也可以有多行[^2]。
+[^1]: This is the first footnote.
 
-你也可以使用文字，更贴合你的写作风格[^note]。
+[^bignote]: Here's one with multiple paragraphs and code.
 
-[^1]：我的参考。
-[^2]：每个新行都应以 2 个空格为前缀。
-  这允许你有一个多行的脚注。
-[^note]：
-    推荐使用数字命名脚注，但文本更容易识别和链接。
-    脚注使用了不同的语法，使用 4 个空格作为新行。
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.
 
 ## 代码
 ```javascript
 console.log("This is a block code")
 ```
-
-~~~css
-.button { border: none; }
-~~~
