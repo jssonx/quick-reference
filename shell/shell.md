@@ -7,6 +7,9 @@ echo "Hello, World!";
 常用的shell
 ```
 zsh：推荐，插件oh my zsh的功能有：history, autosuggesion, vim-like
+- 安装：
+  - zsh：https://zhuanlan.zhihu.com/p/43704296
+  - 插件：https://segmentfault.com/a/1190000039860436
 sh
 bash
 ```
@@ -17,6 +20,7 @@ bash
 ctrl+c: to kill sigint
 ctrl+r: to find history
 tab: to autofill
+ctrl+l: clean
 ```
 
 安装
