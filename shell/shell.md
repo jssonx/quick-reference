@@ -73,7 +73,9 @@ $ cat test_err_out
    - tldr [command] (简化版man)
    - command-not-found.com
  - 参考：https://www.geeksforgeeks.org/basic-shell-commands-in-linux/，https://swcarpentry.github.io/shell-novice/reference
- - 更多信息的参考：https://software-carpentry.org/lessons/index.html
+ - 更多信息的参考：
+  - https://software-carpentry.org/lessons/index.html
+  - https://missing.csail.mit.edu/2020/
 ```
 
 ag
@@ -117,4 +119,19 @@ $ bash ./run.sh
  - 而下面的代码检查 $file 变量是否已被设置：if test $file= "run.sh"
  
  如果没有空格，那么 shell 会尝试执行 $file= "run.sh"，这将会导致错误。
+```
+
+## Part4: examples
+
+1. Dummy experiment
+```shell
+$ ./run_dummy.sh
+```
+
+绘图：gnuplot
+
+
+2. 计算系统的p99
+```shell
+$ vim ./read_req.sh
 ```
