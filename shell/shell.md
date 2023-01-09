@@ -1,4 +1,6 @@
 # Shell
+
+## Part: Intro
 Hello World!
 ```shell
 echo "Hello, World!";
@@ -61,7 +63,7 @@ $ cat test_err_out
  - 例如，在命令行中输入命令 cat file1 并回车，cat 程序会读取 file1 的内容，然后将其输出到标准输出（stdout）。如果读取文件时遇到错误，cat 程序会将错误信息输出到标准错误（stderr）。在 shell 中，可以使用重定向运算符将标准输出、标准输入和标准错误重定向到其他文件或设备。
 ```
 
-Part2: Handy tools
+## Part2: Handy tools
 ```
  - File: cp, rm, cat, find, head, tail, less, mkdir, ln
  - Simple functions: wort, wc
@@ -76,6 +78,43 @@ Part2: Handy tools
 
 ag
 ```
-场景：find keyword
+注：command not found的话sudo apt-get install 搭配cnf.com即可
+场景：find keyword，支持regex
+加强版的grep
+```
 
+awk
+```shell
+常规用例：
+ - average, max, min
+ - get data in a certain column
+ - simple condional logic
+
+$ cat tmp | awk '{print $2}'
+$ cat tmp | awk '{if($1 > 3) print $2}'
+```
+
+sed
+```
+$ sed -n '3 p' ./tmp
+```
+
+## Part3: shell scripts
+
+hello world
+```shell
+$ bash ./run.sh
+```
+
+```
+注：if test $file = "run.sh" shell脚本中=符号两边有空格和没有空格有什么区别？
+ - 在 shell 脚本中，“=”符号用于进行字符串比较。如果两边有空格，则表示比较两边的字符串是否完全相等。如果两边没有空格，则表示判断变量是否已被设置。
+
+ - 例如：if test $file = "run.sh"
+ 
+ 上面的代码检查 $file 变量是否与字符串 "run.sh" 完全相等。
+ 
+ - 而下面的代码检查 $file 变量是否已被设置：if test $file= "run.sh"
+ 
+ 如果没有空格，那么 shell 会尝试执行 $file= "run.sh"，这将会导致错误。
 ```
