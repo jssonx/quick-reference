@@ -1,4 +1,10 @@
-# oh-my-zsh + tmux 配置完美终端环境
+# oh-my-zsh + tmu + powerlevel10k 配置完美终端环境
+
+## Theme
+reference: 
+1. https://zhuanlan.zhihu.com/p/265525597
+2. https://github.com/romkatv/powerlevel10k#installation
+
 
 ## 目录跳转
 
