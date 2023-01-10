@@ -179,8 +179,9 @@ git rebase: rebase set of patches onto a new base
 
 ```
 git status
-
-
+git checkout -b debug
+git checkout main
+git checkout debug
 ```
 
 
