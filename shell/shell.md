@@ -3,7 +3,7 @@
 ## Part: Intro
 Hello World!
 ```shell
-echo "Hello, World!";
+$ echo "Hello, World!";
 ```
 
 常用的shell
@@ -135,3 +135,6 @@ $ ./run_dummy.sh
 ```shell
 $ vim ./read_req.sh
 ```
+
+## Reference
+http://b23.tv/88eEQ4w
