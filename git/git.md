@@ -87,6 +87,32 @@ A Git repository: objects and references
 ```
 
 ### 实操
+#### 快速启动
+```
+init a new one
+1. cd ~/.ssh
+2. ssh-keygen -o -t rsa -C "email@example.com"
+3. cat id_rsa.pub
+4. git config --global user.email "you@example.com"
+5. git config --global user.name "Your Name"
+
+first time local initialization 
+1. git clone git@github.com:cameronmcnz/rock-paper-scissors.git
+2. echo "# cs143-compilers" >> README.md
+3. git init
+4. git add README.md
+5. git commit -m "first commit"
+6. git branch -M main
+7. git remote add origin git@github.com:jssonx/cs143-compilers.git
+8. git push -u origin main
+
+daily updates
+1. git status
+2. git add .
+3. git commit -m "abc"
+4. git push -u origin main
+```
+
 #### 版本控制
 ```shell
 $ git init
@@ -106,7 +132,7 @@ $ echo "one new line" >> hello.txt
 $ git diff hello.txt
 ```
 
-#### 如何写标准的commit msg？
+#### 如何写标准的commit message
 references:
  - 模板与设置模板：https://zj-git-guide.readthedocs.io/zh_CN/latest/message/%5Bgitmessage%5D%E6%8F%90%E4%BA%A4%E6%A8%A1%E6%9D%BF/
 
@@ -137,6 +163,16 @@ references:
 设置默认编辑器
 ```
 git config --global core.editor vim
+```
+#### 分支与合并
+```
+git branch: shows branches
+git branch <name>: creates a branch
+git checkout -b <name>: creates a branch and switches to it
+same as git branch <name>; git checkout <name>
+git merge <revision>: merges into current branch
+git mergetool: use a fancy tool to help resolve merge conflicts
+git rebase: rebase set of patches onto a new base
 ```
 
 ## Reference
