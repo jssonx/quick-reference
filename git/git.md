@@ -174,7 +174,7 @@ git merge <revision>: merges into current branch
 git mergetool: use a fancy tool to help resolve merge conflicts
 git rebase: rebase set of patches onto a new base
 ```
-##### 场景：Debugging
+##### 场景1：Debugging
 想要加很多log，但是bug改完之后要把这些log删掉。但是又不想污染主分支
 
 ```
@@ -188,6 +188,40 @@ git commit -as
 git log
 ```
 
+#### 场景2：复杂的debugging
+```
+git rebase a b
+```
+
+### Remote
+```
+git remote: list remotes
+git remote add <name> <url>: add a remote
+git push <remote> <local branch>:<remote branch>: send objects to remote, and update remote reference
+git branch --set-upstream-to=<remote>/<remote branch>: set up correspondence between local and remote branch
+git fetch: retrieve objects/references from a remote
+git pull: same as git fetch; git merge
+git clone: download repository from remote
+```
+
+### Undo
+```
+git commit --amend: edit a commit’s contents/message
+git reset HEAD <file>: unstage a file
+git checkout -- <file>: discard changes
+```
+
+### Advanced Git
+```
+git config: Git is highly customizable
+git clone --depth=1: shallow clone, without entire version history
+git add -p: interactive staging
+git rebase -i: interactive rebasing
+git blame: show who last edited which line *
+git stash: temporarily remove modifications to working directory *
+git bisect: binary search history (e.g. for regressions)
+.gitignore: specify intentionally untracked files to ignore *
+```
 
 ## Reference
 https://www.bilibili.com/video/BV1YR4y1E7LX
