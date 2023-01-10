@@ -186,6 +186,7 @@ git checkout debug
 git commit -asm "debug: add info"
 git commit -as
 git log
+
 ```
 
 
