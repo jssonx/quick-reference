@@ -174,6 +174,15 @@ git merge <revision>: merges into current branch
 git mergetool: use a fancy tool to help resolve merge conflicts
 git rebase: rebase set of patches onto a new base
 ```
+##### 场景：Debugging
+想要加很多log，但是bug改完之后要把这些log删掉。但是又不想污染主分支
+
+```
+git status
+
+
+```
+
 
 ## Reference
 https://www.bilibili.com/video/BV1YR4y1E7LX
