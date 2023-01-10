@@ -87,6 +87,7 @@ A Git repository: objects and references
 ```
 
 ### 实操
+#### 版本控制
 ```shell
 $ git init
 $ git branch -m main
@@ -103,7 +104,39 @@ $ git log
 $ git checkout 6064ad7fece0d264897bc5806dc715e0e204dc42 （回滚）
 $ echo "one new line" >> hello.txt
 $ git diff hello.txt
-TODO: to complete the course
+```
+
+#### 如何写标准的commit msg？
+references:
+ - 模板与设置模板：https://zj-git-guide.readthedocs.io/zh_CN/latest/message/%5Bgitmessage%5D%E6%8F%90%E4%BA%A4%E6%A8%A1%E6%9D%BF/
+
+模板
+```
+# head: <type>(<scope>): <subject>
+# - type: feat, fix, docs, style, refactor, test, chore
+# - scope: can be empty (eg. if the change is a global or difficult to assign to a single component)
+# - subject: start with verb (such as 'change'), 50-character line
+#
+# body: 72-character wrapped. This should answer:
+# * Why was this change necessary?
+# * How does it address the problem?
+# * Are there any side effects?
+#
+# footer: 
+# - Include a link to the ticket, if any.
+# - BREAKING CHANGE
+#
+```
+
+修改全局配置文件~/.gitconfig，添加
+```
+[commit]
+    template = ~/.gitmessage
+```
+
+设置默认编辑器
+```
+git config --global core.editor vim
 ```
 
 ## Reference
