@@ -1,5 +1,5 @@
 # Git
-
+<!-- TODO：如何使用sourcetree？ -->
 ## Git的结构介绍
 ### Snapshots
 文件在git中被称为blob
@@ -30,7 +30,6 @@ type commit = struct {
     snapshot: tree
 }
 ```
-
 ### Objects and content-addressing
 
 In Git data store, all objects are content-addressed by their SHA-1 hash.
@@ -87,7 +86,28 @@ A Git repository: objects and references
  - git checkout <revision>: updates HEAD and current branch
 ```
 
+### 实操
+```shell
+$ git init
+$ git branch -m main
+$ git status
+$ ls -alh
+$ echo "hello git" >> hello.txt
+$ git add hello.txt
+$ git commit -m "init commit"
+$ git log
+$ echo "test2" >> world.txt   
+$ git add hello.txt
+$ git commit -m "add world.txt"
+$ git log
+$ git checkout 6064ad7fece0d264897bc5806dc715e0e204dc42 （回滚）
+$ echo "one new line" >> hello.txt
+$ git diff hello.txt
 
+
+
+
+```
 
 
 
