@@ -103,47 +103,8 @@ $ git log
 $ git checkout 6064ad7fece0d264897bc5806dc715e0e204dc42 （回滚）
 $ echo "one new line" >> hello.txt
 $ git diff hello.txt
-
-
-
-
+TODO: to complete the course
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Reference
 https://www.bilibili.com/video/BV1YR4y1E7LX
