@@ -182,13 +182,6 @@ git status
 git checkout -b debug
 git checkout main
 git checkout debug
-<<<<<<< HEAD
-=======
-"add in debug branch"
-git commit -asm "debug: add info"
-git commit -as
-git log
->>>>>>> debug
 ```
 
 
