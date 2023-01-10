@@ -19,5 +19,12 @@ reference: https://www.ruanyifeng.com/blog/2019/10/tmux.html]
 启动：键入tmux命令，就进入了 Tmux 窗口。
 退出：按下Ctrl+d或者显式输入exit命令，就可以退出 Tmux 窗口。
 
+### 前缀键
+Tmux 窗口有大量的快捷键。所有快捷键都要通过前缀键唤起。默认的前缀键是Ctrl+b，即先按下Ctrl+b，快捷键才会生效。
+
+举例来说，帮助命令的快捷键是Ctrl+b ?。它的用法是，在 Tmux 窗口中，先按下Ctrl+b，再按下?，就会显示帮助信息。
+
+然后，按下 ESC 键或q键，就可以退出帮助。
+
 ## Reference
 https://zhuanlan.zhihu.com/p/539566646
