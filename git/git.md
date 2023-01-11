@@ -214,7 +214,7 @@ git checkout -- <file>: discard changes
 ### Advanced Git
 ```
 git config: Git is highly customizable
-git clone --depth=1: shallow clone, without entire version history
+git clone --depth=1: shallow clone, without entire version history *
 git add -p: interactive staging
 git rebase -i: interactive rebasing
 git blame: show who last edited which line *
