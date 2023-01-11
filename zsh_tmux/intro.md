@@ -4,7 +4,7 @@
 reference: 
 1. https://zhuanlan.zhihu.com/p/265525597
 2. https://github.com/romkatv/powerlevel10k#installation
-
+source ~/.zshrc
 
 ## 目录跳转
 
