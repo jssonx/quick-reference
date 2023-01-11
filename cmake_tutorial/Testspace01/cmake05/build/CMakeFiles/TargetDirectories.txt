@@ -1,0 +1,5 @@
+/home/jsson/pg/quick-reference/cmake_tutorial/Testspace/cmake05/build/CMakeFiles/edit_cache.dir
+/home/jsson/pg/quick-reference/cmake_tutorial/Testspace/cmake05/build/CMakeFiles/rebuild_cache.dir
+/home/jsson/pg/quick-reference/cmake_tutorial/Testspace/cmake05/build/bin/CMakeFiles/hello.dir
+/home/jsson/pg/quick-reference/cmake_tutorial/Testspace/cmake05/build/bin/CMakeFiles/edit_cache.dir
+/home/jsson/pg/quick-reference/cmake_tutorial/Testspace/cmake05/build/bin/CMakeFiles/rebuild_cache.dir

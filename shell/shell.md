@@ -3,6 +3,10 @@
 ## Part: Intro
 Hello World!
 ```shell
+$ tree
+$ ll
+$ ll 目录
+$ rm -rf *
 $ echo "Hello, World!";
 $ date
 $ echo hello

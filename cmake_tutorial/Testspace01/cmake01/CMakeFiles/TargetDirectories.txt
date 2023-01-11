@@ -1,0 +1,3 @@
+/home/jsson/pg/quick-reference/cmake_tutorial/Testspace/cmake01/CMakeFiles/hello.dir
+/home/jsson/pg/quick-reference/cmake_tutorial/Testspace/cmake01/CMakeFiles/edit_cache.dir
+/home/jsson/pg/quick-reference/cmake_tutorial/Testspace/cmake01/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+/usr/local/share/doc/cmake/COPYRIGHT
+/usr/local/share/doc/cmake/README
+/usr/local/bin/runhello.sh
+/usr/local/share/doc/cmake/hello.txt
