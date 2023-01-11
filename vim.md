@@ -69,6 +69,13 @@ Insert Mode    Command Mode    Visual Mode
  - 修改大小写：~
 ```
 
+## 删除
+```
+ - 删除整行：dd
+ - 删除字符：x
+ - 删除到行尾：D
+```
+
 # References
 1. https://www.bilibili.com/video/BV1PL411M7bg
 2. https://ipads.se.sjtu.edu.cn/zh/slides/tutorial-2021/Tutorial04_Vim.pdf
