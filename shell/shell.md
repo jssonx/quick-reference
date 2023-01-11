@@ -4,6 +4,11 @@
 Hello World!
 ```shell
 $ echo "Hello, World!";
+$ date
+$ echo hello
+$ echo hello > hello.txt
+$ cat < hello.txt > hello2.txt
+
 ```
 
 常用的shell
@@ -136,5 +141,20 @@ $ ./run_dummy.sh
 $ vim ./read_req.sh
 ```
 
+3. 脚本
+```
+mcd () {
+    mkdir -p "$1"
+    cd "$1"
+}
+
+Here $1 is the first argument to the script/function. Unlike other scripting languages, bash uses a variety of special variables to refer to arguments, error codes, and other relevant variables. Below is a list of some of them. A more comprehensive list can be found here.
+
+$0 - Name of the script
+$1 to $9 - Arguments to the script. $1 is the first argument and so on.
+$@ - All the arguments
+$# - Number of arguments
+```
 ## Reference
-http://b23.tv/88eEQ4w
+ - http://b23.tv/88eEQ4w
+ - https://git-scm.com/book/en/v2
