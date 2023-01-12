@@ -90,6 +90,7 @@ please on feature/debug branch
  - main上没有修改，只是在branch上修改了一部分之后，
  - 回到main然后将新的branch上的修改merge回来
  - 所有新的branch上的commit都会merge到main
+ - 总结：只在branch上commit，不在main上commit => fast forward
 
 类型二：没有冲突，type2merge从main分支，然后main和type2merge都commit过，就可能会有conflict
  - new branch上有更新，同时main上也有更新
@@ -99,6 +100,7 @@ please on feature/debug branch
  - 没有冲突的原因是两个分支没有修改相同的文件
  - Optional: git branch -d type2merge
  - 只有commit才是存档点，save文件不是
+ - 总结：既在branch上commit，也在main上commit，但没conflict => merge without conflict
 
 类型三：有冲突
  - 修改了同一份文件
@@ -108,6 +110,7 @@ please on feature/debug branch
  - 保存并关闭文件
  - git add 这份文件
  - git commit -m "resolve conflicts"
+ - 总结：既在branch上commit，也在main上commit，有conflict => merge with conflict
 
 $ git mergetool: use a fancy tool to help resolve merge conflicts
 $ git rebase: rebase set of patches onto a new base
