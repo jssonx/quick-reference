@@ -94,6 +94,8 @@ please on feature/debug branch
 类型二：
  - new branch上有更新，同时main上也有更新
  - 两者不存在冲突
+ - 回到main，使用git merge type2merge
+ - git会在main上创建一个新的commit来merge分支上的信息
 
 $ git mergetool: use a fancy tool to help resolve merge conflicts
 $ git rebase: rebase set of patches onto a new base
