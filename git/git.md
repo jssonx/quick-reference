@@ -91,11 +91,22 @@ please on feature/debug branch
  - 回到main然后将新的branch上的修改merge回来
  - 所有新的branch上的commit都会merge到main
 
-类型二：
+类型二：没有冲突
  - new branch上有更新，同时main上也有更新
  - 两者不存在冲突
  - 回到main，使用git merge type2merge
  - git会在main上创建一个新的commit来merge分支上的信息
+ - 没有冲突的原因是两个分支没有修改相同的文件
+ - Optional: git branch -d type2merge
+
+类型三：有冲突
+ - 修改了同一份文件
+ - 在main上 git merge type3merge
+ - 报conflict错误
+ - 打开conflict的文件，删除三个区域界，然后保留需要的代码
+ - 保存并关闭文件
+ - git add 这份文件
+ - git commit -m "resolve conflicts"
 
 $ git mergetool: use a fancy tool to help resolve merge conflicts
 $ git rebase: rebase set of patches onto a new base
