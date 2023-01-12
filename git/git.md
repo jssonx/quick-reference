@@ -57,9 +57,9 @@ $ git push -u origin main
 ```
 
 ### Branches: 书的书签
-```
-Branching
 
+#### Branching
+```
 $ git branch: shows branches
 $ git branch <name>: creates a branch
 # git branch -c <name>: creates a branch
@@ -75,10 +75,10 @@ $ git switch <name>
 $ git checkout <name>
 $ git checkout -b <name>: creates a branch and switches to it
 same as git branch <name>; git checkout <name>
+```
 
-
-Merging: 
-
+#### Merging
+```
 $ git merge <revision>: merges into current branch
 
 don't do anything experiments on main
