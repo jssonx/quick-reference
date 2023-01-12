@@ -1,2 +1,6 @@
 Name     Type
 ------   ----
+song d   type c
+song e   type c
+song f   type c
+song g   type c
