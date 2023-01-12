@@ -84,7 +84,6 @@ please on feature/debug branch
  - we merge branches
  - we always merge to the current HEAD branch
 
-
 Fastforward merge: main上没有修改，只是在branch上修改了一部分之后，
 回到main然后将新的branch上的修改merge回来
 
