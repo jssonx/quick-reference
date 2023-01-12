@@ -58,6 +58,8 @@ $ git push -u origin main
 
 ### Branches: 书的书签
 ```
+Branching
+
 $ git branch: shows branches
 $ git branch <name>: creates a branch
 # git branch -c <name>: creates a branch
@@ -67,21 +69,15 @@ $ git branch <name>: creates a branch
 
 # git branch -m <name>: change name of the branch
 
-
-
-
-
-
-
-
-
-
 $ git switch <name>
  - switch之前要commit当前信息
 
 $ git checkout <name>
 $ git checkout -b <name>: creates a branch and switches to it
 same as git branch <name>; git checkout <name>
+
+
+Merging
 
 $ git merge <revision>: merges into current branch
 $ git mergetool: use a fancy tool to help resolve merge conflicts
