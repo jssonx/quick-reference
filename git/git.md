@@ -79,18 +79,19 @@ same as git branch <name>; git checkout <name>
 
 Merging: 
 
+$ git merge <revision>: merges into current branch
+
 don't do anything experiments on main
 please on feature/debug branch
  - we merge branches
  - we always merge to the current HEAD branch
 
-Fastforward merge: main上没有修改，只是在branch上修改了一部分之后，
-回到main然后将新的branch上的修改merge回来
+类型一：Fast-forward merge
+ - main上没有修改，只是在branch上修改了一部分之后，
+ - 回到main然后将新的branch上的修改merge回来
+ - 所有新的branch上的commit都会merge到main
 
-add a new line
 
-
-$ git merge <revision>: merges into current branch
 $ git mergetool: use a fancy tool to help resolve merge conflicts
 $ git rebase: rebase set of patches onto a new base
 ```
