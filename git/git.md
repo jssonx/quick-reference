@@ -91,7 +91,7 @@ please on feature/debug branch
  - 回到main然后将新的branch上的修改merge回来
  - 所有新的branch上的commit都会merge到main
 
-类型二：没有冲突
+类型二：没有冲突，type2merge从main分支，然后main和type2merge都commit过，就可能会有conflict
  - new branch上有更新，同时main上也有更新
  - 两者不存在冲突
  - 回到main，使用git merge type2merge
