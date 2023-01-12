@@ -4,6 +4,3 @@ song d   type c
 song e   type c
 song f   type c
 song g   type c
-song merge3
-song merge3
-song merge3
