@@ -98,6 +98,7 @@ please on feature/debug branch
  - git会在main上创建一个新的commit来merge分支上的信息
  - 没有冲突的原因是两个分支没有修改相同的文件
  - Optional: git branch -d type2merge
+ - 只有commit才是存档点，save文件不是
 
 类型三：有冲突
  - 修改了同一份文件
