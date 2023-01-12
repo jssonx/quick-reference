@@ -11,6 +11,9 @@
 
  - git commit: creates a new commit
  - git commit --amend
+ - git commit -a -m ""
+ - git commit -am ""
+ - git commit -s
   - try to keep each commit focused on a single thing
   - 使用现在时作为commit message，比如make foo do something
   - 前后用法保持一致就行
@@ -61,8 +64,10 @@ $ git branch <name>: creates a branch
 $ git switch <name>
  - switch之前要commit当前信息
 
+$ git checkout <name>
 $ git checkout -b <name>: creates a branch and switches to it
 same as git branch <name>; git checkout <name>
+
 $ git merge <revision>: merges into current branch
 $ git mergetool: use a fancy tool to help resolve merge conflicts
 $ git rebase: rebase set of patches onto a new base
@@ -71,8 +76,11 @@ $ git rebase: rebase set of patches onto a new base
 ### Remote
 ```
 $ git remote: list remotes
+
 $ git remote add <name> <url>: add a remote
+
 $ git push <remote> <local branch>:<remote branch>: send objects to remote, and update remote reference
+
 $ git branch --set-upstream-to=<remote>/<remote branch>: set up correspondence between local and remote branch
 $ git fetch: retrieve objects/references from a remote
 $ git pull: same as git fetch; git merge
