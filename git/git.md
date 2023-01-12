@@ -23,10 +23,6 @@
  - git log --oneline
  - git log --pretty
 
- - git diff <filename>: show changes you made relative to the staging area
- - git diff <revision> <filename>: shows differences in a file between snapshots
- - git checkout <revision>: updates HEAD and current branch
-
  - .gitignore
   - referemce: https://www.toptal.com/developers/gitignore/
 
@@ -114,6 +110,65 @@ please on feature/debug branch
 
 $ git mergetool: use a fancy tool to help resolve merge conflicts
 $ git rebase: rebase set of patches onto a new base
+```
+
+### Diff
+保存文件之后就可以git diff了
+```
+$ git diff
+$ git diff HEAD
+$ git diff --cached 或 git diff --staged
+```
+
+`git diff` compares working directory and the index.
+
+`git diff HEAD` compares working directory and the last commit.
+
+`git diff --cached` compares the index and the last commit.
+
+`the index` refers to the staging area
+
+```
+$ git diff branch1 branch2
+ - 比较两个分支下所有文件的区别
+```
+
+```
+$ git diff commit1 commit2
+ - 比较两个commit下所有文件的区别
+ - 比较两个文件的hash
+ - 文件的hash可以通过git log --oneline获得
+```
+
+### Stashing
+ - 场景：开发者A有两个分支main和feature1。
+ - A目前在frature1上写了一些代码还没commit，但突然他需要switch到main去做一些工作。
+ - 如果两个分支没有conflict，那么switch会将新的修改后的信息带到main分支上
+ - 但是feature1上这些新文件他不想现在就merge到main上
+ - 那么可以使用stashing
+ - 或者如果有conflict，那么将无法switch
+ - 除非commit或者stash
+ - 但是如果不觉得这些修改值得一次commit
+ - 那么可以选择stash
+
+```
+$ git stash
+$ git stash pop
+
+$ git stash apply：和pop的区别是，pop之后stash中保存的文件就删除了，但apply之后stash中保存的文件还会继续在
+```
+
+`git stash`命令会将当前工作目录中的未提交的更改和文件存储在一个"贮藏"（stash）中，并将工作目录还原到最后一次提交(commit)的状态。这样可以在不丢失更改的情况下切换到另一个分支或者恢复到清理的状态。
+
+有多个stash的情况（少见）
+```
+$ git stash list
+$ git stash apply stash@{2} # 根据id可以调出指定的stash
+```
+
+```
+$ git stash drop
+$ git stash drop stash@{2}
 ```
 
 ### Remote
