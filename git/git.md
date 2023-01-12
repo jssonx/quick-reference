@@ -60,6 +60,21 @@ $ git push -u origin main
 ```
 $ git branch: shows branches
 $ git branch <name>: creates a branch
+# git branch -c <name>: creates a branch
+
+# git branch -d <name>
+# git branch -D <name>: force deletes the branch
+
+# git branch -m <name>: change name of the branch
+
+
+
+
+
+
+
+
+
 
 $ git switch <name>
  - switch之前要commit当前信息
