@@ -25,6 +25,7 @@
  - git checkout <revision>: updates HEAD and current branch
 
  - .gitignore
+  - referemce: https://www.toptal.com/developers/gitignore/
 
 快速启动
 init a new one
@@ -52,44 +53,48 @@ $ git commit -m "abc"
 $ git push -u origin main
 ```
 
-### 分支与合并
+### Branches: 书的书签
 ```
-git branch: shows branches
-git branch <name>: creates a branch
-git checkout -b <name>: creates a branch and switches to it
+$ git branch: shows branches
+$ git branch <name>: creates a branch
+
+$ git switch <name>
+ - switch之前要commit当前信息
+
+$ git checkout -b <name>: creates a branch and switches to it
 same as git branch <name>; git checkout <name>
-git merge <revision>: merges into current branch
-git mergetool: use a fancy tool to help resolve merge conflicts
-git rebase: rebase set of patches onto a new base
+$ git merge <revision>: merges into current branch
+$ git mergetool: use a fancy tool to help resolve merge conflicts
+$ git rebase: rebase set of patches onto a new base
 ```
 
 ### Remote
 ```
-git remote: list remotes
-git remote add <name> <url>: add a remote
-git push <remote> <local branch>:<remote branch>: send objects to remote, and update remote reference
-git branch --set-upstream-to=<remote>/<remote branch>: set up correspondence between local and remote branch
-git fetch: retrieve objects/references from a remote
-git pull: same as git fetch; git merge
-git clone: download repository from remote
+$ git remote: list remotes
+$ git remote add <name> <url>: add a remote
+$ git push <remote> <local branch>:<remote branch>: send objects to remote, and update remote reference
+$ git branch --set-upstream-to=<remote>/<remote branch>: set up correspondence between local and remote branch
+$ git fetch: retrieve objects/references from a remote
+$ git pull: same as git fetch; git merge
+$ git clone: download repository from remote
 ```
 
 ### Undo
 ```
-git commit --amend: edit a commit’s contents/message
-git reset HEAD <file>: unstage a file
-git checkout -- <file>: discard changes
+$ git commit --amend: edit a commit’s contents/message
+$ git reset HEAD <file>: unstage a file
+$ git checkout -- <file>: discard changes
 ```
 
 ### Advanced Git
 ```
-git config: Git is highly customizable
-git clone --depth=1: shallow clone, without entire version history *
-git add -p: interactive staging
-git rebase -i: interactive rebasing
-git blame: show who last edited which line *
-git stash: temporarily remove modifications to working directory *
-git bisect: binary search history (e.g. for regressions)
+$ git config: Git is highly customizable
+$ git clone --depth=1: shallow clone, without entire version history *
+$ git add -p: interactive staging
+$ git rebase -i: interactive rebasing
+$ git blame: show who last edited which line *
+$ git stash: temporarily remove modifications to working directory *
+$ git bisect: binary search history (e.g. for regressions)
 .gitignore: specify intentionally untracked files to ignore *
 ```
 
@@ -133,7 +138,7 @@ references:
 
 设置默认编辑器
 ```
-git config --global core.editor vim
+$ git config --global core.editor vim
 ```
 
 ### 回滚与版本控制
@@ -159,15 +164,15 @@ $ git diff hello.txt
 想要加很多log，但是bug改完之后要把这些log删掉。但是又不想污染主分支
 
 ```
-git status
-git checkout -b debug
-git checkout main
-git checkout debug
+$ git status
+$ git checkout -b debug
+$ git checkout main
+$ git checkout debug
 "add in debug branch"
-git commit -asm "debug: add info"
-git commit -as
-git log
-git log --oneline
+$ git commit -asm "debug: add info"
+$ git commit -as
+$ git log
+$ git log --oneline
 ```
 
 
