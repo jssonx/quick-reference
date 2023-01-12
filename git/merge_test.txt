@@ -1,6 +1,4 @@
 Name     Type
 ------   ----
-song a   type a
-song b   type a
 song d   type c
 song e   type c
