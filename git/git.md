@@ -91,6 +91,9 @@ please on feature/debug branch
  - 回到main然后将新的branch上的修改merge回来
  - 所有新的branch上的commit都会merge到main
 
+类型二：
+ - new branch上有更新，同时main上也有更新
+ - 两者不存在冲突
 
 $ git mergetool: use a fancy tool to help resolve merge conflicts
 $ git rebase: rebase set of patches onto a new base
