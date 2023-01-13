@@ -195,7 +195,7 @@ $ git stash drop stash@{2}
 
 ### Remote
 ```
-$ git remote
+$ git remote: list remotes
 $ git remote -v
 ```
 
@@ -231,8 +231,13 @@ $ git add <文件名或文件夹名>
 $ git add file1.txt file2.txt folder1/ folder2/
 $ git add *.txt
 $ git add . # 这将会添加当前文件夹下的所有文件
+
+$ git push -u origin main
+ - configure the upstream
+ - 后面直接用git push
 ```
 
+### Fetching and Pulling
 
 
 
@@ -241,13 +246,6 @@ $ git add . # 这将会添加当前文件夹下的所有文件
 
 ### Remote
 ```
-$ git remote: list remotes
-
-$ git remote add <name> <url>: add a remote
-
-$ git push <remote> <local branch>:<remote branch>: send objects to remote, and update remote reference
-
-$ git branch --set-upstream-to=<remote>/<remote branch>: set up correspondence between local and remote branch
 $ git fetch: retrieve objects/references from a remote
 $ git pull: same as git fetch; git merge
 $ git clone: download repository from remote
