@@ -288,12 +288,22 @@ $ git pull
  - 综上，使用git pull一般直接pull当前branch在github的最新commit
 ```
 
-### Remote
+ - 当要push到远程仓库的时候，首先应该看一下git fetch然后git diff origin/branch看看代码是否有区别，然后使用git merge。举例：
 ```
-$ git fetch: retrieve objects/references from a remote
-$ git pull: same as git fetch; git merge
-$ git clone: download repository from remote
+$ git fetch origin main
+$ git diff origin/main main
+$ git merge origin/main
+
+以上三句略等于以下一句：
+$ git pull origin main
 ```
+
+
+
+
+
+
+
 
 ### Undo
 ```
