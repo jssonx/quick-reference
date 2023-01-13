@@ -244,7 +244,8 @@ $ git branch -r
 ```
 ```
 $ git checkout origin/main
- - 
+ - 该checkout只能用于查看
+ - 如果想修改的话需要此时创建一个分支 git switch -c abc
 ```
 
 
