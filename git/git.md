@@ -219,6 +219,18 @@ $ git push <remote> <branch>
 
 $ git push -u <remote> <branch>
  - The -u flag is used to set the upstream repository, which allows you to use the shorthand git push command in the future to push changes to the same remote repository.
+
+$ git push origin <local>:<remote>
+ - <local>表示local的分支名称
+ - <remote>表示remote的分支名称
+ - 该语句表示local和remote的分支名称也可以不同
+
+如果只想push一个文件或文件夹到github的远程仓库，
+在add的时候只添加相应的文件或文件夹即可
+$ git add <文件名或文件夹名>
+$ git add file1.txt file2.txt folder1/ folder2/
+$ git add *.txt
+$ git add . # 这将会添加当前文件夹下的所有文件
 ```
 
 
