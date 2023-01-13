@@ -4,45 +4,47 @@
 
 ### Basics
 ```
- - git help <command>: get help for a git command
- - git init: creates a new git repo, with data stored in the .git directory
- - git status: tells you what’s going on
- - git add <filename>: adds files to staging area
+$ git help <command>: get help for a git command
+$ git init: creates a new git repo, with data stored in the .git directory
+$ git status: tells you what’s going on
+$ git add <filename>: adds files to staging area
 
- - git commit: creates a new commit
- - git commit --amend
- - git commit -a -m ""
- - git commit -am ""
- - git commit -s
+$ git commit: creates a new commit
+$ git commit --amend
+$ git commit -a -m ""
+$ git commit -am ""
+$ git commit -s
   - try to keep each commit focused on a single thing
   - 使用现在时作为commit message，比如make foo do something
   - 前后用法保持一致就行
 
- - git log: shows a flattened log of history
- - git log --all --graph --decorate: visualizes history as a DAG
- - git log --oneline
- - git log --pretty
+$ git log: shows a flattened log of history
+$ git log --all --graph --decorate: visualizes history as a DAG
+$ git log --oneline
+$ git log --pretty
 
  - .gitignore
   - referemce: https://www.toptal.com/developers/gitignore/
 
 快速启动
 init a new one
-1. cd ~/.ssh
-2. ssh-keygen -o -t rsa -C "email@example.com"
-3. cat id_rsa.pub
-4. git config --global user.email "you@example.com"
-5. git config --global user.name "Your Name"
+$ cd ~/.ssh
+$ ssh-keygen -o -t rsa -C "email@example.com"
+$ cat id_rsa.pub
+$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
 
 first time local initialization 
-1. git clone git@github.com:cameronmcnz/rock-paper-scissors.git
-2. echo "# cs143-compilers" >> README.md
-3. git init
-4. git add README.md
-5. git commit -m "first commit"
-6. git branch -M main
-7. git remote add origin git@github.com:jssonx/cs143-compilers.git
-8. git push -u origin main
+$ git clone git@github.com:cameronmcnz/rock-paper-scissors.git
+
+first time local initialization 
+$ echo "# cs143-compilers" >> README.md
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git branch -M main
+$ git remote add origin git@github.com:jssonx/cs143-compilers.git
+$ git push -u origin main
 
 daily updates
 $ git status
@@ -50,6 +52,12 @@ $ git add .
 $ git add filea fileb ...
 $ git commit -m "abc"
 $ git push -u origin main
+```
+
+### 创建项目
+```
+$ git init
+$ git clone [url]
 ```
 
 ### Branches: 书的书签
@@ -171,6 +179,54 @@ $ git stash drop
 $ git stash drop stash@{2}
 ```
 
+### Github: the basics
+#### SSH
+```
+1. cd ~/.ssh
+2. ssh-keygen -o -t rsa -C "email@example.com"
+3. cat id_rsa.pub
+4. git config --global user.email "you@example.com"
+5. git config --global user.name "Your Name"
+```
+
+### Repo
+ - Github上repo的名字不一定和本地一样
+ - 最好一样
+
+### Remote
+```
+$ git remote
+$ git remote -v
+```
+
+Add a new remote
+```
+$ git remote add <name> <url>
+ - 如：git remote add origin http://xxx.git
+ - origin is just a name for the url, just like main is the default name for the branch
+
+重命名
+$ git remote rename <old> <new>
+
+删除
+$ git remote remove <name>
+```
+
+### Push
+```
+$ git push <remote> <branch>
+ - <remote>指的是url name，比如origin
+
+$ git push -u <remote> <branch>
+ - The -u flag is used to set the upstream repository, which allows you to use the shorthand git push command in the future to push changes to the same remote repository.
+```
+
+
+
+
+
+
+
 ### Remote
 ```
 $ git remote: list remotes
@@ -203,14 +259,6 @@ $ git stash: temporarily remove modifications to working directory *
 $ git bisect: binary search history (e.g. for regressions)
 .gitignore: specify intentionally untracked files to ignore *
 ```
-
-
-
-
-
-
-
-
 ----------------------------------------------------------------
 ## 场景举例
 
