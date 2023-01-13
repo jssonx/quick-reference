@@ -1,5 +1,7 @@
 # Git：游戏检查点
 
+![Alt](./image/four_places.png "Fetching and Pulling")
+
 ## Command
 
 ### Basics
@@ -258,8 +260,16 @@ github有更新的commit，我在本地如何获取？
 
 ![Alt](./image/four_places.png "Fetching and Pulling")
 
-
-
+```
+使用git fetch不会污染当前的workspace，
+只会更新本地指针“origin/main”指向的内容
+如果想查看的话可以fetch后直接git checkout origin/main
+$ git fetch <remote>
+ - <remote>默认是origin
+ - 比如：git fetch origin
+$ git fetch <remote> <branch>
+ - 比如：git fetch origin main
+```
 
 
 
