@@ -238,9 +238,14 @@ $ git push -u origin main
 ```
 
 ### Fetching and Pulling
-
-
-
+```
+$ git branch -r
+ - 查看远程分支
+```
+```
+$ git checkout origin/main
+ - 
+```
 
 
 
