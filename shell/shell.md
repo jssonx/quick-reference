@@ -12,8 +12,15 @@ $ date
 $ echo hello
 $ echo hello > hello.txt
 $ cat < hello.txt > hello2.txt
-
 ```
+```
+echo > 和 echo >> 都可以用来将文本输出到文件中。
+
+echo > 会将文本输出到文件中，并覆盖原有的文件内容。
+
+echo >> 会将文本输出到文件中，并在原有文件内容后追加新的文本。
+```
+
 
 常用的shell
 ```
