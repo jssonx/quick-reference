@@ -243,10 +243,24 @@ $ git branch -r
  - 查看远程分支
 ```
 ```
-$ git checkout origin/main
+$ git checkout origin/puppies
  - 该checkout只能用于查看
  - 如果想修改的话需要此时创建一个分支 git switch -c abc
+
+$ git switch puppies
+ - 如果不想只是查看另一个远程的分支，
+ - 可以使用switch语句，这样的话就可以修改和commit相关代码
 ```
+
+github有更新的commit，我在本地如何获取？
+ - fetching
+ - pulling
+
+![Alt](./image/four_places.png "Fetching and Pulling")
+
+
+
+
 
 
 
@@ -345,9 +359,6 @@ $ git log
 $ git log --oneline
 ```
 
-
-
-
 ----------------------------------------------------------------
 ## Git的结构介绍
 ### Snapshots
@@ -416,6 +427,14 @@ def load_reference(name_or_id):
 ### Repositories & Staging Area
 
 A Git repository: objects and references
+
+## Q&A
+1. Git中，detached HEAD是什么意思？
+
+在 Git 中，"detached HEAD" 状态指的是你不再在某个分支上。
+这意味着你目前不在特定的分支上工作，任何更改都不会被添加到分支中，直到你创建新的分支或切换回现有的分支。
+这种状态可能由多种原因引起，例如checkout到特定的提交、已删除的分支或已重置的分支。
+重要的是要注意，在分离的HEAD状态下，提交不会被添加到分支中，并且在切换到其他分支或创建新分支时会丢失所做的所有提交。
 
 ## Reference
 https://www.bilibili.com/video/BV1YR4y1E7LX
