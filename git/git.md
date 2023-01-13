@@ -260,19 +260,33 @@ github有更新的commit，我在本地如何获取？
 
 ![Alt](./image/four_places.png "Fetching and Pulling")
 
+#### Fetching
+使用git fetch不会污染当前的workspace，只会更新本地指针“origin/main”指向的内容。如果想查看的话可以fetch后直接git checkout origin/main
 ```
-使用git fetch不会污染当前的workspace，
-只会更新本地指针“origin/main”指向的内容
-如果想查看的话可以fetch后直接git checkout origin/main
 $ git fetch <remote>
  - <remote>默认是origin
  - 比如：git fetch origin
 $ git fetch <remote> <branch>
  - 比如：git fetch origin main
 ```
+#### Pulling
+```
+git pull = git fetch + git merge
+ - git fetch: update the remote tracking branch with he latest changes from the remote repository
+ - git merge: update my current branch with whatever changes are on the remote tracking branch
+```
 
+```
+$ git pull <remote> <branch>
+ - 使用这个语句时所在的branch很重要，在哪个branch上就会merge到哪个branch上
+```
 
-
+```
+$ git pull
+ - 默认<remote>为origin
+ - 默认<branch>为当前branch正在track的branch，一般为当前branch
+ - 综上，使用git pull一般直接pull当前branch在github的最新commit
+```
 
 ### Remote
 ```
@@ -445,6 +459,14 @@ A Git repository: objects and references
 这意味着你目前不在特定的分支上工作，任何更改都不会被添加到分支中，直到你创建新的分支或切换回现有的分支。
 这种状态可能由多种原因引起，例如checkout到特定的提交、已删除的分支或已重置的分支。
 重要的是要注意，在分离的HEAD状态下，提交不会被添加到分支中，并且在切换到其他分支或创建新分支时会丢失所做的所有提交。
+
+2. Your branch is up to date with 'origin/main'.这句话是什么意思？
+
+在本地，main和origin/main是两个独立的指针，如果main和origin/main的内容相同，则提示这句话。但是如果github远程仓库中的main有来自其他合作者的更新，且更新之后的内容没有fetch到本地，那么即使本地的main实际上与远程的main已经不同了，但仍然会显示Your branch is up to date with 'origin/main'
+
+同步的方法是git fetch origin或git fetch origin main
+
+fetch之后git status会提示Your branch is behind 'origin/main' by 1(or x) commit
 
 ## Reference
 https://www.bilibili.com/video/BV1YR4y1E7LX
