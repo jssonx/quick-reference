@@ -475,6 +475,33 @@ $ git add
 $ git rebase --continue
 ```
 
+### Cleaning history with interactive rebase
+
+就像上一节提到的，使用rebase一般有两种目的：
+1. 作为merge的替代
+2. 作为一个cleanup工具：使用git rebase重写、删除、重命名commits
+
+```
+$ git rebase -i HEAD~9
+ - 仅需修改数字，若仅需修改最近一次commit则将9改为1
+ - 修改过去的commit的commit message：
+   - 可以使用git commit --amend
+   - 也可以使用git rebase -i HEAD~6，然后reword
+   - **reword**：重写commit内容
+ - **fixup**：
+   - 删除该条commit信息，保留这次commit修改的代码等
+   - 被删除的这个commit的修改信息会被添加到更早一次的commit中
+   - 一次可以fuxup多个commit
+   - all of them will be smushed into the previous commit and those messages will be lost
+ - **drop**：既删除commit信息，也删除commit的修改记录
+```
+
+
+
+
+
+
+
 ## 场景举例
 
 ### 如何写标准的commit message
