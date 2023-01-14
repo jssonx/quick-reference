@@ -418,6 +418,23 @@ $ git push origin main
  - Push to origin
  - Open pull request
 
+**举例**
+ - 对于项目Atest，点击fork
+ - 将fork后的项目Atest-forked clone到本地
+ - Setting up a second remote
+   - 获取原项目Atest的url
+   - git remote add upstream [Atest的url]
+   - 此时使用git remote -v可以看到两个remote，origin和upstream
+ - 此时如果Atest项目有了新的commit，可以这样更新：
+   - git pull upstream main
+ - git push origin main
+ - 在github页面提PR
+
+### Rebase
+
+
+
+
 ## 场景举例
 
 ### 如何写标准的commit message
