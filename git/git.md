@@ -562,7 +562,6 @@ $ git push --tags
 $ git push origin <tagname>
 ```
 
-
 ## 场景举例
 
 ### 如何写标准的commit message
@@ -776,4 +775,5 @@ $ git revert -m 1 <merge commit hash>
 ```
 
 ## Reference
-https://www.bilibili.com/video/BV1YR4y1E7LX
+ - https://www.bilibili.com/video/BV1YR4y1E7LX
+ - https://www.udemy.com/course/git-and-github-bootcamp
