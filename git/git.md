@@ -402,32 +402,22 @@ $ git push origin main
  - 此时github上显示PR conflict界面会自动refresh并显示成功merge了PR
 ```
 
+### Fork & Clone
 
+![Alt](./image/fork_workflow.png "Fork Workflow")
 
+在没有成为official contributor的情况下，任何人都可以不经过许可地为项目commit->提PR
 
+在github界面点击PR button即可
 
+工作流总结
+ - Fork the repository
+ - Clone the fork
+ - Add upstream remote
+ - Do some work
+ - Push to origin
+ - Open pull request
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-----------------------------------------------------------------
 ## 场景举例
 
 ### 如何写标准的commit message
@@ -497,7 +487,6 @@ $ git log
 $ git log --oneline
 ```
 
-----------------------------------------------------------------
 ## Git的结构介绍
 ### Snapshots
 文件在git中被称为blob
@@ -581,6 +570,23 @@ A Git repository: objects and references
 同步的方法是git fetch origin或git fetch origin main
 
 fetch之后git status会提示Your branch is behind 'origin/main' by 1(or x) commit
+
+3. 如果在github上我fork了一个项目，但是这个项目本身又有了很多新的commit。我怎么保持我的fork版本的代码和这个项目的代码保持一致呢
+
+你可以在你的 fork 上设置一个 "upstream" 分支，这样你就可以在你的 fork 上同步原项目的最新更新了。你可以使用以下命令来设置 upstream 分支：
+
+```
+$ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+```
+然后你可以使用以下命令来同步你的 fork 上的代码：
+
+```
+$ git fetch upstream
+$ git merge upstream/master
+```
+这个命令会获取 upstream 的最新提交并将它们合并到你的 fork 上。
+
+注意如果在你的本地仓库和upstream仓库有冲突的话，需要自行解决冲突。
 
 ## Reference
 https://www.bilibili.com/video/BV1YR4y1E7LX
