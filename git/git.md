@@ -496,8 +496,34 @@ $ git rebase -i HEAD~9
  - **drop**：既删除commit信息，也删除commit的修改记录
 ```
 
+### Git tags
+Tags一般用来标记重要时刻，比如经常用来标记项目的版本发布，比如v4.1.0, v4.1.1等。
 
+Tags仅仅是commit上的标记而已，不会改变相关信息。
 
+#### Sementic Versioning
+![Alt](./image/semantic-versioning.png "Semantic Versioning")
+ - Major Release 1.0.0：较难向后兼容的更新
+ - Minor Release 0.1.0：feature级更新
+ - Patch Release 0.0.1：补丁级小更新
+
+#### 查看tags
+```
+$ git tag
+$ git tag -l(是List) "*beta*"
+ - 使用regex做filter
+```
+#### 查看tags指向的内容
+```
+$ git checkout <tag>
+$ git switch -c ABC
+ - 用来在这个tag的基础上继续做事
+```
+#### Tags Diffing
+```
+$ git diff <tag> <tag>
+
+```
 
 
 
