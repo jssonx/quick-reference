@@ -432,8 +432,34 @@ $ git push origin main
 
 ### Rebase
 
+![Alt](./image/rebasing.png "Rebasing")
+![Alt](./image/rebasing-2.png "Rebasing")
 
+**重要**
 
+我不想我的feature分支离最新的main分支太远，我可以选择：
+ - merge origin/main分支到我的本地分支
+   - 问题在于，git log会显示大量的与我的修改无关的、其他人提交的commit
+   - 进一步的，如果我将我的分支push和merge到origin main，main中会有大量的merge commits
+
+使用rebase一般有两种目的：
+1. 作为merge的替代
+2. 作为一个cleanup工具
+
+rebase的话，首先需要将main pull到本地，然后使用
+```
+$ git rebase main
+```
+
+在 feature 分支上执行 git rebase main 并不会对 main 分支上的代码产生任何影响。
+
+git rebase 命令是用来重构历史记录的，它可以将 feature 分支上的提交移动到 main 分支上，使得 feature 分支上的代码更新到最新版本。这样做的好处是，可以减少 merge 冲突和保持历史记录的整洁。
+
+但是，这个过程只会影响 feature 分支上的代码，不会对 main 分支产生影响。这意味着，您可以在 feature 分支上重构提交历史记录，而不会影响 main 分支上的代码。
+
+在进行重构操作时候一定要注意，不能对已经提交到公共仓库的分支进行重构，否则会对其他人的工作造成影响。
+
+**什么时候不要rebase？**
 
 ## 场景举例
 
@@ -604,6 +630,48 @@ $ git merge upstream/master
 这个命令会获取 upstream 的最新提交并将它们合并到你的 fork 上。
 
 注意如果在你的本地仓库和upstream仓库有冲突的话，需要自行解决冲突。
+
+4. 如果我想回到过去的某个commit然后在这个commit的基础上继续写代码和commit，不要这个commit之后的代码了。这应该怎么做
+
+如果您想回到过去的某个commit并在此基础上继续写代码和提交，而不保留该commit之后的代码，您可以使用git branch命令在该commit上创建一个新分支。例如：
+```
+$ git branch new_branch abc123
+```
+其中abc123是您想要回到的commit的哈希值，new_branch是新分支的名称。
+
+这会在abc123 commit处创建一个新分支，并将HEAD指向该分支。您现在可以在新分支上继续工作并提交更改，而不会影响主分支的代码。
+
+如果您确定新分支是您想要的，可以使用 git branch -D 主分支名称来删除主分支。
+
+最后，您可以使用git merge命令将新分支的更改合并到主分支中。
+```
+git merge new_branch
+```
+这样就完成了在过去的commit上继续工作并删除之后的commit的操作。
+
+5. 我刚rebase了，但是我想撤销这次rebase，我应该怎么做
+
+您可以使用git reflog命令找到rebase操作之前的commit hash。然后使用git reset命令将HEAD和指定的commit hash重置回去即可。例如：
+
+```
+$ git reflog
+ - 查找rebase操作之前的commit hash
+$ git reset <commit hash>
+```
+
+请确保在运行这些命令之前，您已经将您的工作区清理干净，因为重置会丢失任何未提交的更改。
+
+6. 在git上，我刚merge了，但是我想撤销这次merge，我应该怎么做
+
+```
+$ git revert -m 1 <merge commit hash>
+ - git revert用于撤销之前的提交
+ - -m 1：这个参数是 revert 的选项，它指定了 revert 的模式。在这里，-m 1指的是 revert 在合并模式下运行。这意味着，它会在当前分支上创建一个新的提交，将撤销的更改应用于当前分支。
+ - <merge commit hash>: 这是您要撤销的合并提交的哈希值。您可以使用 git log 命令查看提交历史记录并找到该哈希值。
+ - 总之这个命令就是在当前分支上创建一个新的提交，将对应的合并提交的更改撤销掉。
+ - 请注意，这将创建一个新的提交，将您的代码回滚到合并之前的状态。如果您不想保留这些更改，请在本地执行git reset或git clean命令删除这些文件。
+ - 如果你想重置到先前的版本，可以使用git reset命令：git reset --hard <commit hash>，这样就可以完全撤销本次merge了。
+```
 
 ## Reference
 https://www.bilibili.com/video/BV1YR4y1E7LX
