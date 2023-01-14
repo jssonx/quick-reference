@@ -460,6 +460,20 @@ git rebase 命令是用来重构历史记录的，它可以将 feature 分支上
 在进行重构操作时候一定要注意，不能对已经提交到公共仓库的分支进行重构，否则会对其他人的工作造成影响。
 
 **什么时候不要rebase？**
+![Alt](./image/rebase-warning.png "Warning")
+
+
+
+如果rebase遇到conflict了，可以暂停rebase：(也可以解决conflict)
+```
+$ git rebase --abort
+```
+也可以解决conflict
+```
+解决完之后：
+$ git add
+$ git rebase --continue
+```
 
 ## 场景举例
 
