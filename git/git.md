@@ -521,11 +521,46 @@ $ git switch -c ABC
 ```
 #### Tags Diffing
 ```
-$ git diff <tag> <tag>
-
+$ git diff <older-tag> <newer-tag>
 ```
 
+#### 创建Lightweight tags
+```
+$ git tag <tagname>
+```
 
+#### 创建Annotated tags
+```
+$ git tag -a <tagname>
+```
+
+#### 展示tag的信息
+```
+$ git show <tagname>
+ - 会展示tag名称、annotated信息、commit名称、commit信息
+```
+
+#### Tagging previous commits
+```
+$ git tag <tagname> <commit hash>
+$ git tag -a <tagname> <commit hash>
+```
+
+#### 将一个tag移动到另一个commit上
+```
+$ git tag -f <tagname> <commit hash>
+```
+
+#### 删除 
+```
+$ git tag -d <tagname>
+```
+
+#### push tags
+```
+$ git push --tags
+$ git push origin <tagname>
+```
 
 
 ## 场景举例
