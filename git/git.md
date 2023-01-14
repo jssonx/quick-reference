@@ -298,13 +298,6 @@ $ git merge origin/main
 $ git pull origin main
 ```
 
-
-
-
-
-
-
-
 ### Undo
 ```
 $ git commit --amend: edit a commit’s contents/message
@@ -323,6 +316,117 @@ $ git stash: temporarily remove modifications to working directory *
 $ git bisect: binary search history (e.g. for regressions)
 .gitignore: specify intentionally untracked files to ignore *
 ```
+
+## Workflow
+
+### Centralized Workflow
+每个人都在main上工作（所以自己在不同的机器上其实也应该尽量用不同的branch来工作）
+
+先
+```
+$ git fetch origin main
+$ git diff origin/main main
+$ git merge origin/main
+```
+或者直接
+```
+$ git pull origin main
+ - 但是这样的话一般会报错，远程repo里的内容会覆盖本地内容
+ - 需要在pull之前先将本地的工作commit或stash
+   - 比如：git stash
+   - 然后使用git pull
+   - 然后使用git stash out。这时候一般会conflict，git会阻止这次pop
+   - 那么需要手动resolve the conflict
+     - 使用git status查看有哪些文件有冲突
+     - 使用git diff查看哪些地方有冲突
+     - 解决冲突
+     - 然后使用git add
+    - 注：git stash pop可以使用git stash apply代替，apply的好处是这些stash在手动drop前一直存在
+```
+
+再
+```
+$ git push origin main
+```
+
+### Feature Branch Workflow
+ - branch的起名方法：使用前缀"feature", "bugfix", "hotfix" or "release"。比如：
+   - "feature/new-login-system"
+   - "bugfix/fix-login-error"
+
+查看远程有哪些branch
+```
+$ git branch -r
+```
+
+只想查看某个分支
+```
+$ git checkout origin/navbar
+
+然后使用git switch - 就可以回到checkout之前所在的分支
+$ git switch -
+
+如果想修改navbar分支上的代码并commit，可以switch过去
+$ git switch navbar
+```
+
+### Pull Request
+
+**重要**
+
+作为reviewer，看到别人提交的PR有conflict的时候，可以这么做：
+
+Step1
+```
+$ git pull origin main
+ - 这一句是optional的，取决于当前main是否落后于远程的origin/main
+$ git fetch origin
+ - 此时在本地的main上
+$ git switch [branch]
+ - [branch]：相应分支的名字
+ - 这一句等价于：git checkout -b [branch] origin/[branch]
+$ git merge main
+ - 执行完这一句之后会报conflict
+ - 然后正常到需要resolve的文件改错
+ - 完成之后save文件、add、commit
+ - 此时到了后续可以顺利将该分支merge到main的状态
+```
+
+Step2
+```
+$ git switch main
+ - 这句等价于：git checkout main
+$ git merge --no-ff [branch]
+ - 会弹出merge时提交的commit的需要填写的comment
+$ git push origin main
+ - 此时github上显示PR conflict界面会自动refresh并显示成功merge了PR
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ----------------------------------------------------------------
 ## 场景举例
 
