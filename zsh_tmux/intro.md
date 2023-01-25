@@ -4,6 +4,7 @@
 reference: 
 1. https://zhuanlan.zhihu.com/p/265525597
 2. https://github.com/romkatv/powerlevel10k#installation
+3. VSCODE terminal使用zsh：https://www.jianshu.com/p/6d21d3484444
 source ~/.zshrc
 
 ## 目录跳转
@@ -147,25 +148,7 @@ $ tmux select-pane -L
 
 # 光标切换到右边窗格
 $ tmux select-pane -R
-
-
-
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Reference
 https://zhuanlan.zhihu.com/p/539566646

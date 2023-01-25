@@ -1,5 +1,8 @@
 # Shell
 
+## CRLF和LF
+Windows uses a combination of Carriage Return (CR) and Line Feed (LF) characters as a line ending, whereas Unix-based systems use only the Line Feed (LF) character.
+
 ## Part: Intro
 Hello World!
 ```shell
@@ -12,6 +15,7 @@ $ date
 $ echo hello
 $ echo hello > hello.txt
 $ cat < hello.txt > hello2.txt
+$ cat > Dockerfile
 ```
 ```
 echo > 和 echo >> 都可以用来将文本输出到文件中。
@@ -30,6 +34,7 @@ zsh：推荐，插件oh my zsh的功能有：history, autosuggesion, vim-like
   - 插件：https://segmentfault.com/a/1190000039860436
 sh
 bash
+- VSCODE terminal使用zsh：https://www.jianshu.com/p/6d21d3484444
 ```
 
 常用快捷键
