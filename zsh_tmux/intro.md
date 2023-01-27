@@ -6,6 +6,7 @@ reference:
 2. https://github.com/romkatv/powerlevel10k#installation
 3. VSCODE terminal使用zsh：https://www.jianshu.com/p/6d21d3484444
 source ~/.zshrc
+zsh
 
 ## 目录跳转
 
