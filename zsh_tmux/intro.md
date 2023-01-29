@@ -1,5 +1,15 @@
 # oh-my-zsh + tmu + powerlevel10k 配置完美终端环境
 
+## 常用的shell
+```
+zsh：推荐，插件oh my zsh的功能有：history, autosuggesion, vim-like
+- 安装：
+  - zsh：https://zhuanlan.zhihu.com/p/43704296
+  - 插件：https://segmentfault.com/a/1190000039860436
+sh
+bash
+- VSCODE terminal使用zsh：https://www.jianshu.com/p/6d21d3484444
+```
 ## Theme
 reference: 
 1. https://zhuanlan.zhihu.com/p/265525597
