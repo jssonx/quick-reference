@@ -54,6 +54,9 @@ $ git add .
 $ git add filea fileb ...
 $ git commit -m "abc"
 $ git push -u origin main
+
+rebase
+$ git rebase origin/main
 ```
 
 ### 创建项目
