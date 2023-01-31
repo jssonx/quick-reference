@@ -12,3 +12,7 @@ ubuntu
 ```shell
 $ code code.md
 ```
+
+## Shortcut
+
+设置快捷键：`ctrl` + `s` + `k`
