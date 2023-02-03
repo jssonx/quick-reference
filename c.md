@@ -212,6 +212,14 @@ To copy a character array, we could write the function
 ```
 
 ## 16. Pointers
+A pointer in C is the address of something. pointers are a quite common way to get at the contents of something.
+
+The unary operator `&' is used to produce the address of an object
+```c
+          int a, *b, c;
+          b = &a; /* 用来取地址 */
+          c = *b; /* 用来取地址中的内容 */
+```
 
 
 

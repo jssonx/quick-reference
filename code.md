@@ -16,3 +16,7 @@ $ code code.md
 ## Shortcut
 
 设置快捷键：`ctrl` + `s` + `k`
+
+## vscode.dev
+ - 首先在服务端machine的terminal输入code tunnel
+ - 在其他设备上登录vscode.dev即可开发
