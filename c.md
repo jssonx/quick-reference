@@ -278,6 +278,12 @@ The unary operator `&' is used to produce the address of an object
        }
 ```
 
+```c
+	    int item = 100;
+	    int *pitem = &item;
+	    int **ppitem = &pitem;
+```
+
 ## 17. Function Arguments
 
 该函数的作用是元素交换。定义来两个指针*x和*y。当然，同时也就定义来两个地址x和y。当我们要调用这个函数的时候，定义的是指针，那么传值需要传递元素所在的地址。
