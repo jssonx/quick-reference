@@ -19,7 +19,39 @@ $ echo hello
 $ echo hello > hello.txt
 $ cat < hello.txt > hello2.txt
 $ cat > Dockerfile
+
+$ ls -alh: show all files in a readable format
+
+$ mkdir
+$ rmdir -p: recursively removes a directory
+
+$ file: displays the file type
+$ cp -r: recursively copy files
+$ mv afile dir: move files
+$ head: displays the first line of a file
+    - head -n 20 afile: displays the first 20 lines ef the file
+$ tail: display the last line of a file
+    - tail -n 20 afile: displays the last 20 lines of the file
+
+$ find
+
+$ grep 
+$ grep -n uni afile
+
+$ wget URL
+$ wget -O new_file_name URL
+
+$ ping 
+$ whois
+
+$ tar -cf file.tar f1 f2 f3: creates a tar containing files
+
+$ history: lists command history
+$ !history#: execute the #-th command in the history
+
+$ !!: repeats the last command
 ```
+
 ```
 echo > 和 echo >> 都可以用来将文本输出到文件中。
 
