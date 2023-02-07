@@ -2,6 +2,7 @@
 
 ## Useful links
  - https://www.cs.cornell.edu/courses/cs2043/2019sp/command_index.html
+ - https://explainshell.com/
 
 ## CRLF和LF
 Windows uses a combination of Carriage Return (CR) and Line Feed (LF) characters as a line ending, whereas Unix-based systems use only the Line Feed (LF) character.
