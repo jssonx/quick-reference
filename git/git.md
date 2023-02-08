@@ -59,6 +59,16 @@ rebase
 $ git rebase origin/main
 ```
 
+### 将代码从一个仓库转移到另一个仓库，带完整commit历史等
+```
+<!-- 删除当前远程连接 -->
+$ git remote remove origin
+
+<!-- 添加新的远程连接 -->
+$ git remote add origin <git地址>
+$ git push -u origin main
+```
+
 ### 创建项目
 ```
 $ git init
