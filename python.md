@@ -10,7 +10,9 @@ $ vim ~/.bashrc
 # $ export PATH=/home/jsn/.local/bin:$PATH
 $ export PATH="$PATH:/home/jsn/.local/bin"
 $ source ~/.bashrc
-    注：会报一些bug
+ - zsh uses env profile ~/.zshrc, not ~/.bashrc.
+ - so you need to append your env settings to .zshrc file and then
+ - source ~/.zshrc
 ```
 
 ## 快速计算器
