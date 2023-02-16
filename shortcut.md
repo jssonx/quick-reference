@@ -5,3 +5,4 @@
 
 # VSCode
  - 设置：`ctrl` + `p`
+ - 打开vscode：`截图键`
