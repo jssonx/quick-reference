@@ -18,6 +18,11 @@ reference:
 source ~/.zshrc
 zsh
 
+## 使用
+```
+exec zsh
+```
+
 ## 目录跳转
 
 1. 命令 d 可以显示最近几次的工作目录， 输入数字可以快速跳转
