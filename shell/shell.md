@@ -1,15 +1,20 @@
 # Shell
 
 ## Useful links
- - https://www.cs.cornell.edu/courses/cs2043/2019sp/command_index.html
- - https://explainshell.com/
 
-## CRLF和LF
+- https://www.cs.cornell.edu/courses/cs2043/2019sp/command_index.html
+- https://explainshell.com/
+
+## CRLF 和 LF
+
 Windows uses a combination of Carriage Return (CR) and Line Feed (LF) characters as a line ending, whereas Unix-based systems use only the Line Feed (LF) character.
 
 ## Part: Intro
+
 Hello World!
+
 ```shell
+$ cd -: 快速回答之前所在的目录
 $ tree
 $ ll
 $ ll 目录
@@ -36,13 +41,13 @@ $ tail: display the last line of a file
 
 $ find
 
-$ grep 
+$ grep
 $ grep -n uni afile
 
 $ wget URL
 $ wget -O new_file_name URL
 
-$ ping 
+$ ping
 $ whois
 
 $ tar -cf file.tar f1 f2 f3: creates a tar containing files
@@ -61,8 +66,8 @@ echo > 会将文本输出到文件中，并覆盖原有的文件内容。
 echo >> 会将文本输出到文件中，并在原有文件内容后追加新的文本。
 ```
 
+常用的 shell
 
-常用的shell
 ```
 zsh：推荐，插件oh my zsh的功能有：history, autosuggesion, vim-like
 - 安装：
@@ -83,14 +88,16 @@ ctrl+l: clean
 ```
 
 安装
+
 ```
 Package manager: apt
-搜索: 
+搜索:
 1. $ apt search
 2. https://command-not-found.com/（推荐）
 ```
 
 Communication
+
 ```shell
 Pipe: |
 $ ls | grep "make" 或 ls | grep make
@@ -121,10 +128,11 @@ $ cat test_err_out
 ```
 
 ## Part2: Handy tools
+
 ```
  - File: cp, rm, cat, find, head, tail, less, mkdir, ln
  - Simple functions: wort, wc
- - How to use: 
+ - How to use:
    - -help, --help
    - man [command]
    - tldr [command] (简化版man)
@@ -136,6 +144,7 @@ $ cat test_err_out
 ```
 
 ag
+
 ```
 注：command not found的话sudo apt-get install 搭配cnf.com即可
 场景：find keyword，支持regex
@@ -143,6 +152,7 @@ ag
 ```
 
 awk
+
 ```shell
 常规用例：
  - average, max, min
@@ -154,6 +164,7 @@ $ cat tmp | awk '{if($1 > 3) print $2}'
 ```
 
 sed
+
 ```
 $ sed -n '3 p' ./tmp
 ```
@@ -161,6 +172,7 @@ $ sed -n '3 p' ./tmp
 ## Part3: shell scripts
 
 hello world
+
 ```shell
 $ bash ./run.sh
 ```
@@ -170,30 +182,32 @@ $ bash ./run.sh
  - 在 shell 脚本中，“=”符号用于进行字符串比较。如果两边有空格，则表示比较两边的字符串是否完全相等。如果两边没有空格，则表示判断变量是否已被设置。
 
  - 例如：if test $file = "run.sh"
- 
+
  上面的代码检查 $file 变量是否与字符串 "run.sh" 完全相等。
- 
+
  - 而下面的代码检查 $file 变量是否已被设置：if test $file= "run.sh"
- 
+
  如果没有空格，那么 shell 会尝试执行 $file= "run.sh"，这将会导致错误。
 ```
 
 ## Part4: examples
 
 1. Dummy experiment
+
 ```shell
 $ ./run_dummy.sh
 ```
 
 绘图：gnuplot
 
+2. 计算系统的 p99
 
-2. 计算系统的p99
 ```shell
 $ vim ./read_req.sh
 ```
 
 3. 脚本
+
 ```
 mcd () {
     mkdir -p "$1"
@@ -207,6 +221,8 @@ $1 to $9 - Arguments to the script. $1 is the first argument and so on.
 $@ - All the arguments
 $# - Number of arguments
 ```
+
 ## Reference
- - http://b23.tv/88eEQ4w
- - https://git-scm.com/book/en/v2
+
+- http://b23.tv/88eEQ4w
+- https://git-scm.com/book/en/v2
