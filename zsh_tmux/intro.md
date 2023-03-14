@@ -5,7 +5,10 @@
 zsh：推荐，插件oh my zsh的功能有：history, autosuggesion, vim-like
 - 安装：
   - zsh：https://zhuanlan.zhihu.com/p/43704296
-  - 插件：https://segmentfault.com/a/1190000039860436
+  - 插件：
+    - https://segmentfault.com/a/1190000039860436
+    - https://github.com/romkatv/powerlevel10k#installation
+
 sh
 bash
 - VSCODE terminal使用zsh：https://www.jianshu.com/p/6d21d3484444
@@ -13,7 +16,6 @@ bash
 ## Theme
 reference: 
 1. https://zhuanlan.zhihu.com/p/265525597
-2. https://github.com/romkatv/powerlevel10k#installation
 3. VSCODE terminal使用zsh：https://www.jianshu.com/p/6d21d3484444
 source ~/.zshrc
 zsh
@@ -36,7 +38,7 @@ exec zsh
 extract （自带，无需手动安装）这个插件可以实现压缩包的快速解压， 各种格式都可以快速解压，无需记住复杂的解压命令。
 
 ## tmux使用
-reference: https://www.ruanyifeng.com/blog/2019/10/tmux.html]
+reference: https://www.ruanyifeng.com/blog/2019/10/tmux.html
 
 ### 启动与退出
 启动：键入tmux命令，就进入了 Tmux 窗口。
