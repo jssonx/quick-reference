@@ -14,12 +14,3 @@ $ source ~/.bashrc
  - so you need to append your env settings to .zshrc file and then
  - source ~/.zshrc
 ```
-
-## 快速计算器
-
-```python
-import math
-x = 3/5 * math.log(5/3, 2)
-y = 2/5 * math.log(5/2, 2)
-print(x+y)
-```
